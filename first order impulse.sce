@@ -1,0 +1,12 @@
+clc;
+clear;
+clf;
+R = 500;
+C = 1*10^-6;
+T1 = R*C;
+s = %s;
+t = (0:0.0001:0.004);
+TF1 = syslin('c',1,T1*s+1);
+Vol = csim('impulse',t,TF1);
+plot(t,Vol,'red');
+xgrid();
